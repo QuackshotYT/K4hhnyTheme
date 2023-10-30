@@ -1,0 +1,32 @@
+{
+"manifest_version": 2,
+"name": "K4hhny Theme V2",
+"description": "Custom Redesignd Theme For K4hhnyYT/TTV",
+"version": "1.0",
+"icons": {
+    "16": "icon.jpg",
+    "48": "icon.jpg",
+    "128": "icon.jpg"
+  },
+"content_scripts":[
+    {
+      "matches":[
+        "https://shellshock.io/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+"browser_action": {
+    "default_icon": "icon.jpg",
+    "default_popup": "popup.html"
+  },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+"permissions": [
+    "activeTab",
+    "storage",
+    "https://ajax.googleapis.com/"
+  ]
+}
